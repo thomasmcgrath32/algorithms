@@ -10,6 +10,7 @@ public class App {
         System.out.println("Addition: " + add(x,y));
         System.out.println("Subtraction: " + subtract(x,y));
         System.out.println("GCF: " + GCF(x,y));
+        givenSum();
         in.close();
     }
 
@@ -32,5 +33,21 @@ public class App {
         }
         return GCF;    
     }
-    
+    /** Find a pair with the given sum in an array
+     * nums = [8, 7, 2, 5, 3, 1] target = 10
+     */
+    public static void givenSum() {
+        int [] nums  = {8,7,2,5,3,1};
+        int target = 10;
+         
+        for(int i = 0; i < nums.length; i++) {
+            for (int j = 0; j <nums.length - 1; j++) {
+                if(i != j && !(i > j)) {
+                    if (nums[i] + nums[j] == target) {
+                        System.out.println(nums[i] + ","+ nums[j]);
+                    }
+                }
+            }
+        }
+    }    
 }
