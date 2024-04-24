@@ -11,6 +11,7 @@ public class App {
         System.out.println("Subtraction: " + subtract(x,y));
         System.out.println("GCF: " + GCF(x,y));
         givenSum();
+        looper();
         in.close();
     }
 
@@ -50,4 +51,19 @@ public class App {
             }
         }
     }    
+
+    public static void looper() {
+        boolean check = true;
+        int count = 0;
+        while (check) {
+            count += 1;
+
+            if(count == 69 || count == 420) {
+                System.out.println("69420");
+            } else if (count == 500) {
+                check = false;
+                System.out.println("Thats 500");
+            }
+        }
+    }
 }
